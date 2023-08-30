@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  main {
+    background-color: rgb(32, 37, 59);
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+  }
+  
+  .main-container{
+    position: relative;
+    width: auto;
+    padding-top: 10px;
+}
+/*creating line for timeline*/
+.main-container::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    background-color: #FFC0CB;
+    top:0;
+    bottom: 0;
+    left: 50%;
+    height: 1800px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*Adjusting box of all content*/
+.text-wrapper{
+    padding: 10px 40px;
+    position: relative;
+    width:51%;
+    box-sizing: border-box;
+    margin: 50px 0;
+}
+.text-wrapper::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    right: -10px;
+    background-color:#FF69B4;
+    top:15px;
+    z-index: 1;
+    translate: 0 300%;
+}
+/*for left events*/
+.left{
+    left: 0;
+}
+/*for right events*/
+.right{
+    left:50%;
+}
+.right::after{
+    left:-10px;
+}
+/*content box colour padding and radius for circular corner*/
+.content{
+    padding: 15px 15px 15px 17px;
+    background-color: #FFC0CB;
+    border-radius: 4px;
+    max-width: 300px;
+    margin: auto;
+}
+/*setting text property of event heading*/
+.content h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #212121;
+    letter-spacing:1px;
+}
+/*setting text property of event content*/
+.content p{
+    color: #616161;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 2px;
+}
