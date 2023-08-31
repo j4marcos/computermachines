@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+     margin: 0;
+    padding: 0;
+    background-color: #b48f4a;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+   
+  }
+
+  header h1 {
+    margin: 0;
+    padding: 30px;
+  }
+  
+  main {
+    background-color: rgba(169, 169, 199, 0.438);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     padding: 50px;
+  }
+
+  .soroban {
+    display: flex;
+    background-color: rgba(127, 255, 212, 0);
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 50px; */
+  }
+
+
+  .base{
+    height: 40px;
+        width: 80px;
+        background-color: rgb(92, 39, 14);
+        align-items: center;
+        justify-content: center;
+      }
+
+    .base h2 {
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        margin: 0;
+    }
+
+    .lateral-base {
+        height: 360px;
+        width: 20px;
+        background-color: rgb(92, 39, 14);
+        margin: 0 10px;
+    }
+
+  .bar {
+    height: 20px;
+    width: 80px;
+    background-color: white;
+  }
+
+  .rod {
+    display: flex;
+    width: 10px;
+    height: 360px;
+    background-color: #b95f0b;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+  }
+  .container-5 {
+    position: relative;
+    background-color: #9e434300;
+    width: 40px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-1 {
+    position: relative;
+    background-color: #61979e00;
+    width: 40px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .bead {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: margin 0.2s ease-in-out;
+  }
+
+  .bead p {
+    color: #ffffff41;
+  }
+
+  .unit5.active {
+    margin-top: 20px;
+  }
+
+  .unit1.active {
+    margin-bottom: 40px;
+  }

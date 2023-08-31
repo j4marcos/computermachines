@@ -15,8 +15,9 @@ body {
     background-color: rgb(32, 37, 59);
     margin: 0;
     padding: 0;
-    height: 2000px;
+    height: 1500px;
   }
+
   
   .main-container{
     position: relative;
@@ -28,11 +29,11 @@ body {
     content: '';
     position: absolute;
     width: 10px;
-    background-color: #FFC0CB;
+    background-color: #c3b3d3;
     top:0;
     bottom: 0;
     left: 50%;
-    height: 1800px;
+    height: 1200px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -50,7 +51,7 @@ body {
     width: 30px;
     height: 10px;
     right: -10px;
-    background-color:#FF69B4;
+    background-color:#f5ebfd;
     top:15px;
     z-index: 1;
     translate: 0 300%;
@@ -69,7 +70,7 @@ body {
 /*content box colour padding and radius for circular corner*/
 .content{
     padding: 15px 15px 15px 17px;
-    background-color: #FFC0CB;
+    background-color: #e9a66f;
     border-radius: 4px;
     max-width: 300px;
     margin: auto;
@@ -77,14 +78,14 @@ body {
 /*setting text property of event heading*/
 .content h3{
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px;
     color: #212121;
     letter-spacing:1px;
+    font-weight: 800;
 }
 /*setting text property of event content*/
 .content p{
-    color: #616161;
-    font-weight: 300;
+    color: #000000;
     font-size: 18px;
     margin-top: 2px;
 }
