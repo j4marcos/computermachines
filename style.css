@@ -43,7 +43,7 @@ body {
     position: relative;
     width:51%;
     box-sizing: border-box;
-    margin: 50px 0;
+    margin: 40px 0;
 }
 .text-wrapper::after{
     content: '';
@@ -72,7 +72,7 @@ body {
     padding: 15px 15px 15px 17px;
     background-color: #e9a66f;
     border-radius: 4px;
-    max-width: 300px;
+    max-width: 400px;
     margin: auto;
 }
 /*setting text property of event heading*/
@@ -88,4 +88,20 @@ body {
     color: #000000;
     font-size: 18px;
     margin-top: 2px;
+}
+
+
+@media  (max-width: 700px) {
+     .main-container{
+    width: 180%;
+     }
+
+
+    .right{
+    left: 0;
+}
+    .right::after{
+    left:95%;
+}
+    
 }
