@@ -2,14 +2,6 @@ const beads5 = document.querySelectorAll(".unit5")
 const beads1 = document.querySelectorAll(".unit1")
 const rodContainer = document.querySelector(".rod-cotainer")
 
-const numeroInput = document.getElementById('barInput'); 
-
-
-
-numeroInput.addEventListener('input', function() {
-    
-})
-
 
 beads5.forEach(bead5 => {
     bead5.addEventListener('click', () => {
