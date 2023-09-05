@@ -98,7 +98,7 @@ body {
 @media  (max-width: 700px) {
 
     .text-wrapper{
-      width: 80%;  
+      width: 87%;  
       justify-content: right;
     }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .main-container::after{
-    left: 90%;
+    left: 87%;
 }
     
 }
