@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,19 +7,26 @@ body {
   }
   
   header {
-    background-color: #333;
+    background: rgb(47,52,65);
+background: linear-gradient(180deg, rgb(62, 68, 80) 66%, rgba(54,99,115,1) 80%, rgba(0,212,255,1) 100%);
     color: white;
     text-align: center;
     padding: 0.5rem;
-   
+    font-family: 'Orbitron', sans-serif;
+   letter-spacing: 2px;
   }
   
   main {
-    background-color: rgb(32, 37, 59);
+    background: rgb(55,16,96);
+    background: linear-gradient(180deg, rgb(58, 62, 68) 0%, rgb(53, 53, 102) 35%, rgb(33, 68, 75) 100%);
     margin: 0;
     padding: 0;
     height: 1500px;
      
+  }
+
+  a{
+    text-decoration: none;
   }
 
   
@@ -31,35 +40,54 @@ body {
     content: '';
     position: absolute;
     width: 10px;
-    background-color: #c3b3d3;
+    background-color:rgba(0,212,255,1);
     top:0;
     bottom: 0;
     left: 50%;
-    height: 1200px;
+    height: 1350px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 /*Adjusting box of all content*/
 .text-wrapper{
-    padding: 10px 40px;
+    padding: 10px 0px;
     position: relative;
     display: flex;
     justify-content: right;
-    width:50%;
+    width: 50%;
     box-sizing: border-box;
-    margin: 40px 0;
+    margin: 20px 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-.text-wrapper::after{
-    content: '';
-    position: absolute;
-    width: 30px;
+
+.time-mark {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    height: 5px;
+    width: 80%;
+    background-color: rgba(0,212,255,1);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-mark span{
+    margin-left: 50px;
+    translate: 0 -100%;
+    color: aliceblue;
+    font-family: 'Orbitron', sans-serif;
+   letter-spacing: 2px;
+}
+
+.bola {
     height: 10px;
-    right: -10px;
-    background-color:#f5ebfd;
-    top:15px;
-    z-index: 1;
-    translate: 0 300%;
+    width: 10px;
+    border-radius: 50%;
+    border: rgba(0,212,255,1) solid 4px;
+    translate:  -20px;
 }
+
 /*for left events*/
 .left{
     left: 0;
@@ -68,30 +96,65 @@ body {
 .right{
     left:50%;
     justify-content: left;
+    align-items: flex-start;
 }
-.right::after{
-    left:-10px;
+
+.right .time-mark{
+    flex-direction: row-reverse;
 }
+
+.right .bola {
+    translate: 20px 0;
+}
+
 /*content box colour padding and radius for circular corner*/
 .content{
-    padding: 15px 15px 15px 17px;
-    background-color: #e9a66f;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 40px;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: #407994;
     border-radius: 4px;
     max-width: 350px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    
 }
-/*setting text property of event heading*/
+
+.content:hover {
+        padding: 50px;
+}
+
+.content:hover p{
+        color: white;
+       
+}
+
 .content h3{
     text-transform: uppercase;
     font-size: 18px;
-    color: #212121;
+    color: #ffffff;
     letter-spacing:1px;
-    font-weight: 800;
+    font-weight: 600;
+    margin: 0;
 }
 /*setting text property of event content*/
 .content p{
-    color: #000000;
+    color: #2e2e2e81;
     font-size: 18px;
     margin-top: 2px;
+}
+
+.abaco {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTimtEJJdr30mOz6Kfsg1WGwiwYtA2Q0gfYxyJ271L5drPe5lDG_8fy_5Vo-P-bQKGPi08&usqp=CAU");
+    background-size: cover;
+}
+
+.pascalina {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://farm2.staticflickr.com/1087/538696501_f7d4f42314.jpg");
+    background-size: cover;
 }
 
 
@@ -102,11 +165,24 @@ body {
       justify-content: right;
     }
 
+    .content {
+        margin: 10px 10px 0 0px;
+        width: fit-content;
+        height: fit-content;
+    }
+
     .right{
     left: 0;
+    justify-content: right;
+    align-items: flex-end;
 }
-    .right::after{
-    left:95%;
+
+.right .time-mark{
+    flex-direction: row;
+}
+
+.right .bola {
+    translate: -20px 0;
 }
 
 .main-container::after{
