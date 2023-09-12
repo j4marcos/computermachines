@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: rgb(55,16,96);
   }
   
   header {
@@ -23,7 +22,7 @@ background: linear-gradient(180deg, rgb(62, 68, 80) 66%, rgba(54,99,115,1) 80%, 
     margin: 0;
     padding: 0;
     height: 1500px;
-     
+    min-height: 100vh;
   }
 
   a{
