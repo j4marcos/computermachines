@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7e7e7e;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+   
+  }
+
+  header h1 {
+    margin: 0;
+    padding: 30px;
+  }
+  
+  main {
+    background-color: rgba(233, 233, 233, 0.438);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .pascalina {
+    height: 350px;
+    width: 500px;
+    background-color: rgb(163, 127, 10);
+  }
+
+  .interface {
+    display: flex;
+    height: 275px;
+    width: 500px;
+    background-color: rgb(192, 180, 11);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .coluna{
+    background-color: rgba(0, 0, 255, 0.301);
+    border: black solid 1px;
+    height: 225px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .digitos{
+    height: 80px;
+    width: auto;
+    background-color: rgba(255, 0, 0, 0.281);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .numero{
+    height: 15px;
+    width: 10px;
+    background-color: white;
+  }
+
+  .roda{
+    display: flex;
+    height: 54px;
+    width: 54px;
+    border: rgb(196, 186, 157) solid 8px;
+    background-color: rgba(172, 255, 47, 0.377);
+    border-radius: 50%;
+  }
+
+  .raios {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+
+  .raio {
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: -8px;
+    left: 22px;
+    width: 6px;
+    height: 70px;
+  }
+  
+  .raio {
+    transform: rotate(0deg);
+  }
+
+  .raio.deg30 {
+    transform: rotate(35deg);
+  }
+
+  .raio.deg60 {
+    transform: rotate(70deg);
+  }
+
+  .deg30:after, .deg60:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 7px;
+    height: 70px;
+  }
+
+  .raio.deg30:after {
+    transform: rotate(75deg);
+  }
+
+  .raio.deg60:after {
+    transform: rotate(75deg);
+  }
+  
+  
