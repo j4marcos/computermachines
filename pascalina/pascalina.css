@@ -26,14 +26,15 @@ body {
   }
 
   .pascalina {
-    height: 350px;
+    height: 325px;
     width: 500px;
     background-color: rgb(163, 127, 10);
+    user-select: none;
   }
 
   .interface {
     display: flex;
-    height: 275px;
+    height: 250px;
     width: 500px;
     background-color: rgb(192, 180, 11);
     flex-direction: row;
@@ -41,12 +42,25 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
+    position: relative;
+  }
+
+  .placa {
+    position: absolute;
+    height: 40px;
+    width: 430px;
+    background-color: #bda865;
+    translate: 0 -200%;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .placa.abaixada {
+    translate: 0 -90%;
   }
 
   .coluna{
-    background-color: rgba(0, 0, 255, 0.301);
-    border: black solid 1px;
-    height: 225px;
+    background-color: rgba(0, 0, 255, 0.11);
+    height: 200px;
     width: 70px;
     display: flex;
     flex-direction: column;
@@ -57,7 +71,7 @@ body {
   .digitos{
     height: 80px;
     width: auto;
-    background-color: rgba(255, 0, 0, 0.281);
+    background-color: rgba(255, 0, 0, 0.181);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -67,8 +81,8 @@ body {
   }
 
   .numero{
-    height: 15px;
-    width: 10px;
+    height: 20px;
+    width: 15px;
     background-color: white;
   }
 
@@ -79,26 +93,25 @@ body {
     border: rgb(196, 186, 157) solid 8px;
     background-color: rgba(172, 255, 47, 0.377);
     border-radius: 50%;
+    overflow: hidden;
   }
 
   .raios {
-    width: 50px;
-    height: 50px;
+    width: 54px;
+    height: 54px;
     position: relative;
+    /* transform: rotate(0deg); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .raio {
     content: "";
     position: absolute;
     background-color: black;
-    top: -8px;
-    left: 22px;
     width: 6px;
     height: 70px;
-  }
-  
-  .raio {
-    transform: rotate(0deg);
   }
 
   .raio.deg30 {
