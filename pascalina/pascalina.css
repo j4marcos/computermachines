@@ -52,6 +52,7 @@ body {
     background-color: #bda865;
     translate: 0 -200%;
     transition: all 0.4s ease-in-out;
+    z-index: 100;
   }
 
   .placa.abaixada {
@@ -59,7 +60,6 @@ body {
   }
 
   .coluna{
-    background-color: rgba(0, 0, 255, 0.11);
     height: 200px;
     width: 70px;
     display: flex;
@@ -81,9 +81,31 @@ body {
   }
 
   .numero{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 20px;
     width: 15px;
     background-color: white;
+    overflow: hidden;
+    font-weight: 500;
+  }
+
+  .changed {
+    animation: rodar .3s;
+  }
+
+  @keyframes rodar {
+    50% {
+      translate: 100% 0;
+    }
+    51% {
+      translate: -100% 0;
+    }
+    100% {
+      translate: 0;
+    }
   }
 
   .roda{
@@ -91,9 +113,12 @@ body {
     height: 54px;
     width: 54px;
     border: rgb(196, 186, 157) solid 8px;
-    background-color: rgba(172, 255, 47, 0.377);
     border-radius: 50%;
     overflow: hidden;
+  }
+
+  .notacaoAngulo{
+    display: none;
   }
 
   .raios {
@@ -104,6 +129,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s ease-in-out;
   }
 
   .raio {
@@ -138,4 +164,14 @@ body {
     transform: rotate(75deg);
   }
   
+  @media (max-width: 520px) {
+    .pascalina {
+      width: 430px;
+    }
+
+    .interface {
+      width: 430px;
+    }
+  }
+
   
