@@ -166,8 +166,9 @@ body {
   
   @media (max-width: 520px) {
     .pascalina {
+	transform: scale(0.8);
       width: 430px;
-      transform: scale(0.8);
+      
     }
 
     .interface {
