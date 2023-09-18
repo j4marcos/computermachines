@@ -31,6 +31,7 @@ body {
     background-color: rgba(127, 255, 212, 0);
     align-items: center;
     justify-content: center;
+    user-select: none;
     /* margin-top: 50px; */
   }
 
@@ -70,6 +71,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
+    user-select: none;
   }
   .container-5 {
     position: relative;
