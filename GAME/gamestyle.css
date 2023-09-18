@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: rgb(47,52,65);
+    background: linear-gradient(180deg, rgb(62, 68, 80) 66%, rgba(54,99,115,1) 80%, rgba(0,212,255,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+   letter-spacing: 2px;
+   position: relative;
+  }
+
+  header h2, header h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  main {
+    background: rgb(55,16,96);
+    background: linear-gradient(180deg, rgb(58, 62, 68) 0%, rgb(53, 53, 102) 35%, rgb(33, 68, 75) 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }

@@ -14,14 +14,16 @@ body {
     padding: 0.5rem;
     font-family: 'Orbitron', sans-serif;
    letter-spacing: 2px;
+   position: relative;
   }
+
   
   main {
     background: rgb(55,16,96);
     background: linear-gradient(180deg, rgb(58, 62, 68) 0%, rgb(53, 53, 102) 35%, rgb(33, 68, 75) 100%);
     margin: 0;
     padding: 0;
-    height: 1500px;
+    height: 1900px;
     min-height: 100vh;
   }
 
@@ -44,7 +46,7 @@ body {
     top:0;
     bottom: 0;
     left: 50%;
-    height: 1350px;
+    height: 1750px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -57,8 +59,9 @@ body {
     width: 50%;
     box-sizing: border-box;
     margin: 20px 0;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .time-mark {
@@ -108,28 +111,39 @@ body {
 
 
 .content{
-    display: flex;
-    flex-wrap: wrap;
+    height: 50px;
+    width: 250px;
     margin: 0 40px;
     margin-top: 20px;
     padding: 10px 10px 10px 10px;
     background-color: #407994;
     border-radius: 4px;
     max-width: 350px;
-    flex-direction: column;
-    align-items: center;
     transition: all 0.3s ease-in-out;
-    
+    overflow: hidden;
 }
 
 .content:hover {
-        padding: 50px;
+    height: 200px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
 }
 
-.content:hover p{
-        color: white;
-       
+.content:hover p {
+    margin-top: 20px;
+    animation: text 2s both;
 }
+
+@keyframes text {
+    50% {
+        color: rgba(255, 255, 255, 0); 
+    }
+
+    100% {
+        color: white;
+    }
+}
+
 
 .content h3{
     text-transform: uppercase;
@@ -138,17 +152,25 @@ body {
     letter-spacing:1px;
     font-weight: 600;
     margin: 0;
+    text-align: center;
 }
 
 .content p{
-    color: #2e2e2e81;
+    color: rgba(255, 255, 255, 0); 
     font-size: 18px;
     margin-top: 2px;
+    text-align: justify;
 }
 
 .abaco {
-    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTimtEJJdr30mOz6Kfsg1WGwiwYtA2Q0gfYxyJ271L5drPe5lDG_8fy_5Vo-P-bQKGPi08&usqp=CAU");
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.479), rgb(51, 50, 63)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc608HyVUHI_D9NaYyjLO0oRcuQY66kh8KaA&usqp=CAU");
     background-size: cover;
+}
+
+.rodaDeLeibniz {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://miro.medium.com/v2/resize:fit:700/1*F_WmaoTZ3wdztAYkjXOEFg.jpeg");
+    /* background-size: cover; */
+    background-position: 20%;
 }
 
 .pascalina {
@@ -156,6 +178,79 @@ body {
     background-size: cover;
 }
 
+.tear {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Jacquard_loom_p1040320.jpg/220px-Jacquard_loom_p1040320.jpg");
+    background-size: cover;
+    background-position: 20%;
+}
+
+
+.engenhoAnalitico {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://qph.cf2.quoracdn.net/main-qimg-f74bcda7cf036ed1b7a3d39bf8462fb9-lq");
+    background-size: cover;
+}
+
+.colossus1 {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://img.ibxk.com.br/2013/6/materias/9119619556173414.jpg?ims=328x");
+    background-size: cover;
+}
+
+.ENIAC {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://cdn.britannica.com/95/170195-050-EFCB2F83/ENIAC-1946.jpg");
+    background-size: cover;
+}
+
+.IBM7030 {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://3.bp.blogspot.com/-K4MCTxXi_B4/UIClRBNaG4I/AAAAAAAAAC4/v6bKipRldD4/s400/komputer-generasi-kedua.jpg.jpg");
+    background-size: cover;
+}
+
+.IBM360 {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://archive.computerhistory.org/resources/physical-object/ibm/X1321-97.lg.jpg");
+    background-size: cover;
+}
+
+.altair {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://altairclone.com/pictures/front2.jpg");
+    background-size: cover;
+}
+
+.macintosh {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://media.istockphoto.com/id/479468999/pt/foto/apple-macintosh-128-k-desde-1984-o-vintage-imac.jpg?s=612x612&w=0&k=20&c=YEc58Pc8CRO87r5sc0zggYhYt6XmcLthasb8cCQ3yz4=");
+    background-size: cover;
+    background-position: 20%;
+}
+
+.iphone {
+    background-image: linear-gradient(0,rgba(52, 52, 61, 0.363), rgb(51, 50, 63)),url("https://t.ctcdn.com.br/rdoxiko5E1M_5i-ygUUO4X83dr8=/400x315/smart/i761670.jpeg");
+    background-size: cover;
+}
+
+.referencias {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.534);
+    background-color: rgb(33, 68, 75);
+}
+
+footer {
+    background: rgb(47,52,65);
+    background: linear-gradient(0deg, rgb(40, 51, 73) 80%, rgba(54,99,115,1) 90%, rgba(0,212,255,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+   letter-spacing: 2px;
+}
+
+footer button {
+    background-color: rgb(46, 49, 56);
+    height: 50px;
+    width: 150px;
+    font-family: 'Orbitron', sans-serif;
+   letter-spacing: 2px;
+   color:rgba(0,212,255,1);
+}
 
 @media  (max-width: 700px) {
 
@@ -166,8 +261,8 @@ body {
 
     .content {
         margin: 10px 10px 0 0px;
-        width: fit-content;
-        height: fit-content;
+        /* width: fit-content;
+        height: fit-content; */
     }
 
     .right{
