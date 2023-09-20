@@ -24,7 +24,7 @@ setInterval(() => {
             pontos = 3
         } else {
             lineWidth = 100
-            document.querySelector(".popup venceu").classList.add("ativo")
+            document.querySelector(".venceu").classList.add("ativo")
     }
 
         if (secret) {
