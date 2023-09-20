@@ -235,7 +235,7 @@ body {
 
 footer {
     background: rgb(47,52,65);
-    background: linear-gradient(0deg, rgb(40, 51, 73) 80%, rgba(54,99,115,1) 90%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(180deg, rgb(45, 48, 53) 1%, rgb(62, 68, 80) 80%);
     color: white;
     text-align: center;
     padding: 0.5rem;
@@ -250,6 +250,13 @@ footer button {
     font-family: 'Orbitron', sans-serif;
    letter-spacing: 2px;
    color:rgba(0,212,255,1);
+   box-shadow: -1px 2px 15px 2px rgba(0, 213, 255, 0.281);
+   margin-bottom: 15px;
+}
+
+footer button:hover {
+    color: white;
+    box-shadow: -1px 2px 15px 2px rgba(0, 213, 255, 0.481);
 }
 
 @media  (max-width: 700px) {
@@ -257,12 +264,19 @@ footer button {
     .text-wrapper{
       width: 87%;  
       justify-content: right;
+      margin-top: 50px;
     }
 
     .content {
         margin: 10px 10px 0 0px;
         /* width: fit-content;
         height: fit-content; */
+    }
+
+    .content:hover {
+        height: 200px;
+        width: 90%;
+        transition: all 0.5s ease-in-out;
     }
 
     .right{
