@@ -65,8 +65,12 @@ animation: pulsar 0.5s infinite;
 .lineMark .mark {
   height: 20px;
   width: 10px;
-  background-color: #333;
-  translate: 0 -50%;
+  /* background-color: #333; */
+  translate: -50% -50%;
+}
+
+.mark img {
+  translate: 0 -20%;
 }
 
 .popup {

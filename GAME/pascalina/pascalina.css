@@ -1,24 +1,120 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #7e7e7e;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-   
-  }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-  header h1 {
-    margin: 0;
-    padding: 30px;
+html {
+  background-color: rgb(146, 150, 161);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: rgb(146, 150, 161);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+body.verificando {
+  box-shadow: 5px 5px 500px 100px rgba(0, 0, 0, 0.358) inset;
+}
+
+/* rgba(0,212,255,1) 100%  rgba(54,99,115,1) 90%) */
+
+header {
+  background: rgb(62, 68, 80);
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  height: 100px;
+  
+}
+
+.line {
+  display: flex;
+  height: 10px;
+  width: 100%;
+  background-color: aqua;
+  box-shadow: -1px 2px 50px 10px rgba(0, 212, 255, 0.43);
+  transition: all 0.2s ease-in-out;
+}
+
+.line.verificando{
+animation: pulsar 0.5s infinite;
+}
+
+@keyframes pulsar {
+  0% {
+    box-shadow: -1px 2px 50px 10px rgba(0, 212, 255, 0.43);
   }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: -1px 2px 50px 10px rgba(0, 212, 255, 0.43);
+  }
+}
+
+.lineMark {
+  height: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lineMark .mark {
+  height: 20px;
+  width: 10px;
+  /* background-color: #333; */
+  translate: -50% -50%;
+}
+
+.mark img {
+  translate: 0 -20%;
+}
+
+.popup {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: #2d3346e8;
+  position: absolute;
+  z-index: 100;
+}
+
+.popup.desativo {
+  display: none;
+}
+
+.popup button.comecar {
+  height: 50px;
+  width: 200px;
+  font: inherit;
+}
+
+.popup.venceu {
+  display: none;
+}
+
+.popup.venceu.ativo {
+  display: block;
+}
+
+.continuar{
+  margin-top: 50px;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 30px;
+  color: rgba(215, 236, 250, 0.568);
+}
+
+header h2 {
+  margin: 0;
+  padding: 30px;
+}
   
   main {
-    background-color: rgba(233, 233, 233, 0.438);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,31 +124,34 @@ body {
   .pascalina {
     height: 325px;
     width: 500px;
-    background-color: rgb(163, 127, 10);
+    background-color: rgb(138, 109, 14);
     user-select: none;
+    box-shadow: 10px 30px 30px 5px rgba(0, 0, 0, 0.473);
   }
 
   .interface {
     display: flex;
     height: 250px;
     width: 500px;
-    background-color: rgb(192, 180, 11);
+    background-color: rgb(206, 185, 65);
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
     position: relative;
+    box-shadow: 0px 0px 50px 10px  rgba(104, 73, 14, 0.295) inset;
   }
 
   .placa {
     position: absolute;
     height: 40px;
     width: 430px;
-    background-color: #bda865;
+    background-color: rgb(206, 185, 65);
     translate: 0 -200%;
     transition: all 0.4s ease-in-out;
-    z-index: 100;
+    z-index: 10;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.473);
   }
 
   .placa.abaixada {
@@ -71,13 +170,14 @@ body {
   .digitos{
     height: 80px;
     width: auto;
-    background-color: rgba(255, 0, 0, 0.181);
+    background-color: rgba(167, 132, 36, 0.493);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.229) inset;
   }
 
   .numero{
@@ -85,11 +185,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20px;
-    width: 15px;
+    height: 30px;
+    width: 25px;
     background-color: white;
     overflow: hidden;
-    font-weight: 500;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.418) inset;
   }
 
   .changed {
@@ -109,12 +210,11 @@ body {
   }
 
   .roda{
+    position: relative;
     display: flex;
-    height: 54px;
-    width: 54px;
-    border: rgb(196, 186, 157) solid 8px;
-    border-radius: 50%;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .notacaoAngulo{
@@ -122,6 +222,12 @@ body {
   }
 
   .raios {
+    background-color: rgba(0, 0, 0, 0.671);
+    height: 54px;
+    width: 54px;
+    border: rgb(194, 186, 162) solid 7px;
+    border-radius: 50%;
+    overflow: hidden;
     width: 54px;
     height: 54px;
     position: relative;
@@ -130,14 +236,16 @@ body {
     justify-content: center;
     align-items: center;
     transition: all .3s ease-in-out;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.336);
   }
 
   .raio {
     content: "";
     position: absolute;
-    background-color: black;
+    background-color:  rgb(190, 165, 49);
     width: 6px;
     height: 70px;
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.274); */
   }
 
   .raio.deg30 {
@@ -151,7 +259,7 @@ body {
   .deg30:after, .deg60:after {
     content: "";
     position: absolute;
-    background-color: black;
+    background-color: rgb(184, 159, 47);
     width: 7px;
     height: 70px;
   }
@@ -163,6 +271,37 @@ body {
   .raio.deg60:after {
     transform: rotate(75deg);
   }
+
+
+.trava {
+  margin-top: 2px;
+  height: 10px;
+  top: 100%;
+  left: 28%;
+  display: flex;
+  
+}
+
+.marcadorTrava {
+  height: 50px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  width: 10px;
+  background-color: rgb(161, 109, 11);
+  /* position: absolute; */
+  translate: 0 -80%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.581) inset;
+  
+}
+
+.parafuso {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(161, 109, 11);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.581) inset;
+}
+
+
   
   @media (max-width: 520px) {
     .pascalina {
@@ -176,4 +315,30 @@ body {
     }
   }
 
+  .numero.certo, span.certo{
+    color: rgb(0, 213, 255);
+    font-weight: 800;
+    /* background-color: rgb(94, 94, 94); */
+    /* box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.507) inset; */
+  }
   
+  .numero.errado, span.errado {
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+    /* box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.507) inset; */
+  }
+
+  section button {
+    margin: 30px;
+    height: 60px;
+    width: auto;
+    background-color: rgb(62, 68, 80);
+    color: rgb(255, 255, 255);
+    font-family: 'Orbitron', sans-serif;
+    /* font-weight: 800; */
+    letter-spacing: 2px;
+  }
+  
+  section button:hover {
+    color: aqua;
+  }
