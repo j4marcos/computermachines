@@ -13,7 +13,7 @@ var pontos
 
 setInterval(() => {
         if (lineWidth > 0 && !secret && !verificando) {
-            lineWidth -= 0.06 + pontos/100
+            lineWidth -= 0.06
             if (lineWidth.toFixed(1) == 33.0 || lineWidth.toFixed(1) == 66.0) reset()
         }
         if (lineWidth < 33) {
